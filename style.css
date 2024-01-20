@@ -1,0 +1,285 @@
+* {
+  outline: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: Pelak;
+  src: url(./fonts/PelakFA-Regular.ttf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Pelak;
+  src: url(./fonts/PelakFA-Bold.ttf);
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: Pelak;
+  src: url(.//fonts/PelakFA-Black.ttf);
+  font-weight: 900;
+}
+
+:root {
+  --color-primary: #fff;
+  --color-secondary: #f7f7f7;
+  --p-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  --font-family: Pelak;
+  --font-regular: 700;
+  --font-bold: 800;
+  --font-black: 900;
+  --shadow-btn: 4px 18px 62px 0px rgba(0, 0, 0, 0.5),
+    -3px -4px 7px 0px rgba(255, 255, 255, 0.15) inset;
+  --btn-primary: radial-gradient(
+      107.08% 85.59% at 86.3% 87.5%,
+      rgba(0, 0, 0, 0.21) 0%,
+      rgba(0, 0, 0, 0) 86.18%
+    ),
+    radial-gradient(
+      83.94% 83.94% at 26.39% 20.83%,
+      rgba(255, 255, 255, 0.41) 0%,
+      rgba(255, 255, 255, 0) 69.79%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    #ff71c2;
+  --icon-bg: radial-gradient(
+      76.16% 76.16% at 31.97% 19.67%,
+      rgba(255, 255, 255, 0.7) 0%,
+      rgba(255, 255, 255, 0) 69.79%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    #ca8ae2;
+  --icon-shadow: 0px 17px 23px 0px rgba(10, 10, 10, 0.25),
+    3px 4px 8px 0px rgba(255, 255, 255, 0.7) inset,
+    -10px -12px 18px 0px rgba(0, 0, 0, 0.25) inset,
+    0px 2px 2px 0px rgba(255, 255, 255, 0.6) inset,
+    6px 9px 9px 0px rgba(255, 255, 255, 0.1) inset,
+    0px -3px 8px 0px rgba(255, 255, 255, 0.25) inset;
+  --bg-content: radial-gradient(
+      107.08% 85.59% at 86.3% 87.5%,
+      rgba(0, 0, 0, 0.16) 0%,
+      rgba(0, 0, 0, 0) 86.18%
+    ),
+    radial-gradient(
+      83.94% 83.94% at 26.39% 20.83%,
+      rgba(255, 255, 255, 0.41) 0%,
+      rgba(255, 255, 255, 0) 76.6%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    rgba(201, 112, 255, 0.97);
+  --bg-content-shadow: 4px 38px 62px 0px rgba(0, 0, 0, 0.3),
+    -3px -4px 7px 0px rgba(255, 255, 255, 0.15) inset;
+}
+
+body {
+  font-family: var(--font-family);
+  background: url(./img/Valentine.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.Image-Content {
+  margin: 0 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.Image-Content #img-1 {
+  animation: Myheart-1 5s infinite;
+}
+.Image-Content #img-2 {
+  animation: Myheart-2 5s infinite;
+}
+
+@keyframes Myheart-1 {
+  50% {
+    transform: translateY(20px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+@keyframes Myheart-2 {
+  50% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+}
+
+.Content #img-title {
+  display: block;
+  margin: -13rem auto 0;
+  width: 65%;
+  height: auto;
+}
+
+.Content p {
+  text-align: center;
+  margin-top: -2rem;
+  font-size: 4rem;
+  color: var(--color-primary);
+  text-shadow: var(--p-shadow);
+  font-weight: var(--font-bold);
+}
+
+.Content button {
+  display: block;
+  margin: 1rem auto 0;
+  background: var(--btn-primary);
+  border: none;
+  border-radius: 100px;
+  box-shadow: var(--bg-content-shadow);
+}
+.Content button a {
+  display: block;
+  padding: 1rem 3.5rem;
+  color: var(--color-primary);
+  font-weight: var(--font-bold);
+  font-family: var(--font-family);
+  font-size: 1rem;
+}
+
+.Content i {
+  display: block;
+  margin: 0 auto 0;
+  width: 45px;
+  text-align: center;
+  margin-top: 3rem;
+  background: var(--icon-bg);
+  color: var(--color-primary);
+  font-size: 18px;
+  padding: 0.75rem;
+  border-radius: 100px;
+  box-shadow: var(--icon-shadow);
+  filter: drop-shadow(4px 38px 62px rgba(0, 0, 0, 0.5));
+  animation: Myheart-3 3s infinite;
+}
+
+@keyframes Myheart-3 {
+  50% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+.Container .Box {
+  display: grid;
+  grid-template-columns: 400px 800px;
+  grid-template-rows: 1fr;
+  justify-items: end;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  margin: 20rem 0 20rem;
+  row-gap: 18rem;
+}
+
+.Box img {
+  width: 120%;
+  height: 120%;
+  border-radius: 80px;
+  border: 10px solid #c081dc;
+  box-shadow: 4px 38px 62px 0px rgba(0, 0, 0, 0.3),
+    -3px -4px 7px 0px rgba(255, 255, 255, 0.15) inset;
+  z-index: 9999;
+  margin: 0 -1rem 0 0;
+}
+
+.Box .C-box-1 {
+  background: var(--bg-content);
+  box-shadow: var(--bg-content-shadow);
+  padding: 3rem 4rem;
+  border-radius: 0 109px 109px 0;
+}
+
+.C-box-1 h2 {
+  color: var(--color-primary);
+  font-weight: var(--font-black);
+  text-shadow: var(--p-shadow);
+  font-size: 2rem;
+}
+
+.C-box-1 p {
+  color: var(--color-secondary);
+  font-size: 1rem;
+  margin: 0.3rem 0 0;
+}
+
+.C-box-1 button {
+  margin: 1.75rem 0 0;
+  background: var(--btn-primary);
+  border: none;
+  border-radius: 100px;
+  box-shadow: var(--bg-content-shadow);
+}
+.C-box-1 button a {
+  display: block;
+  padding: 0.65rem 2.5rem;
+  color: var(--color-primary);
+  font-weight: var(--font-bold);
+  font-family: var(--font-family);
+  font-size: 0.95rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .Image-Content {
+    margin-top: 2rem;
+    justify-content: center;
+  }
+  .Image-Content img {
+    width: 30%;
+  }
+  .Content #img-title {
+    margin: 0 auto 0;
+    width: 80%;
+  }
+  .Content p {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  .Content button a {
+    padding: 1rem 2.5rem;
+    font-size: 0.95rem;
+  }
+  .Container .Box {
+    grid-template-columns: 300px;
+    margin: 5rem 0 5rem;
+    row-gap: 5rem;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+  }
+  .Box img {
+    width: 100%;
+    height: auto;
+    border: 8px solid #c081dc;
+    margin: 0 0 -12rem 0;
+  }
+  .Box .C-box-1 {
+    padding: 8rem 2rem 2rem 2rem;
+    text-align: center;
+    border-radius: 109px;
+  }
+  .C-box-1 h2 {
+    font-size: 1.5rem;
+  }
+  .C-box-1 p {
+    font-size: 14px;
+  }
+  .C-box-1 button a {
+    padding: 0.55rem 2.5rem;
+    font-size: 0.75rem;
+  }
+}
